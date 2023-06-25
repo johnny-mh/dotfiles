@@ -20,7 +20,7 @@ end
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  -- local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   --Enable completion triggered by <c-x><c-o>
 
@@ -28,27 +28,27 @@ local on_attach = function(client, bufnr)
   --buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
-  local opts = { noremap = true, silent = true, buffer = ev.buf  }
+  -- local opts = { noremap = true, silent = true, buffer = ev.buf  }
 
   -- Buffer local mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
-  vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
-  vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
-  vim.keymap.set('n', '<space>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, opts)
-  vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
-  vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
-  vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-  vim.keymap.set('n', '<space>f', function()
-    vim.lsp.buf.format { async = true }
-  end, opts)
+  -- vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+  -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+  -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+  -- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+  -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+  -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+  -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+  -- vim.keymap.set('n', '<space>wl', function()
+  --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  -- end, opts)
+  -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+  -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+  -- vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+  -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+  -- vim.keymap.set('n', '<space>f', function()
+  --   vim.lsp.buf.format { async = true }
+  -- end, opts)
 end
 
 
@@ -83,10 +83,10 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-nvim_lsp.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
+-- nvim_lsp.flow.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities
+-- }
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
@@ -95,31 +95,31 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.sourcekit.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-nvim_lsp.lua_ls.setup {
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-    enable_format_on_save(client, bufnr)
-  end,
-  settings = {
-    Lua = {
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { 'vim' },
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false
-      },
-    },
-  },
-}
+-- nvim_lsp.sourcekit.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
+--
+-- nvim_lsp.lua_ls.setup {
+--   capabilities = capabilities,
+--   on_attach = function(client, bufnr)
+--     on_attach(client, bufnr)
+--     enable_format_on_save(client, bufnr)
+--   end,
+--   settings = {
+--     Lua = {
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = { 'vim' },
+--       },
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = vim.api.nvim_get_runtime_file("", true),
+--         checkThirdParty = false
+--       },
+--     },
+--   },
+-- }
 
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
@@ -131,10 +131,10 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.astro.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
+-- nvim_lsp.astro.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities
+-- }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
