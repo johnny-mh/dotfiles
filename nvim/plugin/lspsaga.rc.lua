@@ -28,10 +28,10 @@ keymap('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', opts)
 keymap({'n','v'}, '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
 
 -- Rename all occurrences of the hovered word for the entire file
-keymap('n', 'gr', '<cmd>Lspsaga rename<CR>', opts)
+-- keymap('n', 'gr', '<cmd>Lspsaga rename<CR>')
 
 -- Rename all occurrences of the hovered word for the selected files
-keymap('n', 'gr', '<cmd>Lspsaga rename ++project<CR>', opts)
+keymap('n', 'gr', '<cmd>Lspsaga rename ++project<CR>')
 
 -- Peek definition
 -- You can edit the file containing the definition in the floating window

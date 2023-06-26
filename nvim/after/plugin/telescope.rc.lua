@@ -15,6 +15,17 @@ telescope.setup {
       n = {
         ["q"] = actions.close
       }
+    },
+  },
+  pickers = {
+    find_files = {
+      path_display = { "truncate" }
+    },
+    live_grep = {
+      path_display = { "truncate" }
+    },
+    buffers = {
+      path_display = { "truncate" }
     }
   },
   extensions = {
@@ -37,10 +48,18 @@ telescope.setup {
         },
       },
     },
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    },
   },
 }
 
-telescope.load_extension("file_browser")
+telescope.load_extension('file_browser')
+telescope.load_extension('fzf')
 
 vim.keymap.set('n', ';f',
   function()
@@ -57,6 +76,9 @@ vim.keymap.set('n', '\\\\', function()
 end)
 vim.keymap.set('n', ';t', function()
   builtin.help_tags()
+end)
+vim.keymap.set('n', ';g', function()
+  builtin.git_status()
 end)
 -- vim.keymap.set('n', ';;', function()
 --   builtin.resume()

@@ -108,23 +108,26 @@ nvim_lsp.cssls.setup {
 --   on_attach = on_attach,
 --   capabilities = capabilities
 -- }
-nvim_lsp.eslint.setup {
-  on_attach = function(client, bufnr)
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      buffer = bufnr,
-      command = 'EslintFixAll'
-    })
-  end,
-}
+-- nvim_lsp.eslint.setup {
+--   capabilities = capabilities
+-- }
+-- nvim_lsp.eslint.setup {
+--   on_attach = function(client, bufnr)
+--     vim.api.nvim_create_autocmd('BufWritePre', {
+--       buffer = bufnr,
+--       command = 'EslintFixAll'
+--     })
+--   end,
+-- }
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    update_in_insert = false,
-    virtual_text = { spacing = 4, prefix = "●" },
-    severity_sort = true,
-  }
-)
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+--   vim.lsp.diagnostic.on_publish_diagnostics, {
+--     underline = true,
+--     update_in_insert = false,
+--     virtual_text = { spacing = 4, prefix = "●" },
+--     severity_sort = true,
+--   }
+-- )
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = "󰅚 ", Warn = " ", Hint = "󰌶 ", Info = " " }

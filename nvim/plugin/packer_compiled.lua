@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/johnny/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["editorconfig.nvim"] = {
+    loaded = true,
+    path = "/Users/johnny/.local/share/nvim/site/pack/packer/start/editorconfig.nvim",
+    url = "https://github.com/gpanders/editorconfig.nvim"
+  },
   ["git.nvim"] = {
     loaded = true,
     path = "/Users/johnny/.local/share/nvim/site/pack/packer/start/git.nvim",
@@ -193,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/johnny/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/johnny/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
