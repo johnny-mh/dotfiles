@@ -28,6 +28,10 @@ packer.startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make'
+  }
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use {
@@ -40,12 +44,6 @@ packer.startup(function(use)
     'iamcco/markdown-preview.nvim',
     run = function() vim.fn['mkdp#util#install']() end,
   }
-  -- use 'github/copilot.vim'
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
   use 'gpanders/editorconfig.nvim'
-  use {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'make'
-  }
 end)
