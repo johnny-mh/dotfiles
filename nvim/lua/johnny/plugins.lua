@@ -39,11 +39,6 @@ packer.startup(function(use)
     requires = { 'JoosepAlviste/nvim-ts-context-commentstring' }
   }
   use 'norcalli/nvim-colorizer.lua'
-  use 'folke/zen-mode.nvim'
-  use {
-    'iamcco/markdown-preview.nvim',
-    run = function() vim.fn['mkdp#util#install']() end,
-  }
   use 'lewis6991/gitsigns.nvim'
   use 'gpanders/editorconfig.nvim'
 end)
