@@ -4,7 +4,8 @@ if not tokyo_status then
 end
 
 tokyonight.setup({
-	style = 'night' -- 'storm', 'night', 'moon' and 'day'
+	style = 'night', -- 'storm', 'night', 'moon' and 'day'
+  light_style = 'night'
 })
 
 vim.cmd [[ colorscheme tokyonight ]]
