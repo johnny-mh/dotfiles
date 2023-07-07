@@ -94,11 +94,7 @@ nvim_lsp.tsserver.setup {
     })
 
     ts_utils.setup_client(client)
-
-
   end,
-
-
 }
 
 nvim_lsp.tailwindcss.setup {
@@ -106,6 +102,10 @@ nvim_lsp.tailwindcss.setup {
 }
 
 nvim_lsp.cssls.setup {
+  capabilities = capabilities
+}
+
+nvim_lsp.astro.setup {
   capabilities = capabilities
 }
 

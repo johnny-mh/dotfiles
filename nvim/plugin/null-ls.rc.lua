@@ -4,8 +4,8 @@ if (not status) then return end
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup {
   sources = {
-    null_ls.builtins.formatting.prettierd,
-    null_ls.builtins.formatting.eslint_d,
+    null_ls.builtins.formatting.prettierd.with({ extra_filetypes = { 'astro' } }),
+    null_ls.builtins.formatting.eslint_d.with({ extra_filetypes = { 'astro' } }),
     null_ls.builtins.diagnostics.eslint.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),

@@ -51,4 +51,6 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'lewis6991/gitsigns.nvim'
   use 'gpanders/editorconfig.nvim'
+  use 'wuelnerdotexe/vim-astro'
+  use 'virchau13/tree-sitter-astro'
 end)
