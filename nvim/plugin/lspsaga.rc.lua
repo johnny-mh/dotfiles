@@ -1,7 +1,18 @@
 local status, saga = pcall(require, 'lspsaga')
 if (not status) then return end
 
-saga.setup {}
+saga.setup({
+  ui = {
+    border = 'rounded',
+    devicon = true
+  },
+  lightbulb = {
+    enable = false
+  },
+  implement = {
+    enable = false
+  }
+})
 
 local diagnostic = require('lspsaga.diagnostic')
 local keymap = vim.keymap.set
