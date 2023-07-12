@@ -11,22 +11,12 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
+    path_display = { "smart" },
     mappings = {
-      n = {
-        ["q"] = actions.close
+      i = {
+        ['<esc>'] = action.close
       }
     },
-  },
-  pickers = {
-    find_files = {
-      path_display = { "truncate" }
-    },
-    live_grep = {
-      path_display = { "truncate" }
-    },
-    buffers = {
-      path_display = { "truncate" }
-    }
   },
   extensions = {
     file_browser = {
@@ -53,7 +43,6 @@ telescope.setup {
       override_generic_sorter = true,  -- override the generic sorter
       override_file_sorter = true,     -- override the file sorter
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                       -- the default case_mode is "smart_case"
     },
   },
 }
