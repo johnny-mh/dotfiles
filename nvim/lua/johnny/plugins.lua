@@ -36,7 +36,12 @@ packer.startup(function(use)
     end
   }
   use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-telescope/telescope.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      'nvim-telescope/telescope-live-grep-args.nvim',
+    }
+  }
   use 'nvim-telescope/telescope-file-browser.nvim'
   use {
     'nvim-telescope/telescope-fzf-native.nvim',

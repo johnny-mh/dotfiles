@@ -60,6 +60,7 @@ telescope.setup {
 
 telescope.load_extension('file_browser')
 telescope.load_extension('fzf')
+telescope.load_extension('live_grep_args')
 
 vim.keymap.set('n', '<leader>f',
   function()
@@ -69,7 +70,7 @@ vim.keymap.set('n', '<leader>f',
     })
   end)
 vim.keymap.set('n', '<leader>r', function()
-  builtin.live_grep()
+  telescope.extensions.live_grep_args.live_grep_args()
 end)
 vim.keymap.set('n', '<leader>b', function()
   builtin.buffers()
@@ -77,18 +78,9 @@ end)
 vim.keymap.set('n', '<leader>d', function()
   builtin.oldfiles()
 end)
--- vim.keymap.set('n', ';t', function()
---   builtin.help_tags()
--- end)
 vim.keymap.set('n', '<leader>g', function()
   builtin.git_status()
 end)
--- vim.keymap.set('n', ';;', function()
---   builtin.resume()
--- end)
--- vim.keymap.set('n', ';e', function()
---   builtin.diagnostics()
--- end)
 vim.keymap.set("n", "<leader>e", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
