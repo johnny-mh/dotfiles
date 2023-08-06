@@ -1,8 +1,8 @@
-local keymap = vim.keymap
+local keymap = vim.keymap.set
 
 -- keymap.set('n', 'x', '"_x')
-keymap.set('i', 'jk', '<Esc>')
-keymap.set('t', 'jk', [[<C-\><C-n>]])
+keymap('i', 'jk', '<Esc>')
+keymap('t', 'jk', [[<C-\><C-n>]])
 
 -- Increment/decrement
 -- keymap.set('n', '+', '<C-a>')
@@ -14,7 +14,7 @@ keymap.set('t', 'jk', [[<C-\><C-n>]])
 -- Select all
 -- keymap.set('n', '<C-a>', 'gg<S-v>G')
 
-keymap.set('n', '<space>w', ':w<CR>')
+keymap('n', '<space>w', ':w<CR>')
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
