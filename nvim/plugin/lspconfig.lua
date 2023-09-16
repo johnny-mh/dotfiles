@@ -109,6 +109,8 @@ nvim_lsp.astro.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.stylelint_lsp.setup { }
+
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = "󰅚 ", Warn = " ", Hint = "󰌶 ", Info = " " }
 for type, icon in pairs(signs) do
