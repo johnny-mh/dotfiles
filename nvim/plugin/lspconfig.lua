@@ -109,7 +109,9 @@ nvim_lsp.astro.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.stylelint_lsp.setup { }
+nvim_lsp.stylelint_lsp.setup {
+  filetypes = { "scss" },
+}
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = "󰅚 ", Warn = " ", Hint = "󰌶 ", Info = " " }
