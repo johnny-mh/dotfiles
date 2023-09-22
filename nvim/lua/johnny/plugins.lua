@@ -17,6 +17,7 @@ packer.startup(function(use)
   use 'bmatcuk/stylelint-lsp'
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'neovim/nvim-lspconfig' -- LSP
+  use "lukas-reineke/lsp-format.nvim"
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use {
     'jose-elias-alvarez/nvim-lsp-ts-utils',
