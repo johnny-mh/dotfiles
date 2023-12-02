@@ -17,8 +17,9 @@ packer.startup(function(use)
   use 'bmatcuk/stylelint-lsp'
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'neovim/nvim-lspconfig' -- LSP
-  use "lukas-reineke/lsp-format.nvim"
+  use 'lukas-reineke/lsp-format.nvim'
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'MunifTanjim/prettier.nvim'
   use {
     'jose-elias-alvarez/nvim-lsp-ts-utils',
     requires = {
@@ -58,6 +59,13 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'lewis6991/gitsigns.nvim'
   use 'gpanders/editorconfig.nvim'
-  use 'wuelnerdotexe/vim-astro'
+  use {
+    'wuelnerdotexe/vim-astro',
+    ft = 'astro',
+    run = function()
+      vim.g.astro_typescript = 'enable'
+      vim.g.astro_stylus     = 'disable'
+    end
+  }
   use 'virchau13/tree-sitter-astro'
 end)
