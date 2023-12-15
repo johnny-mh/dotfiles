@@ -11,7 +11,6 @@ local async = event == "BufWritePost"
 null_ls.setup {
   sources = {
     null_ls.builtins.diagnostics.eslint_d.with({
-      diagnostics_format = '[eslint] #{m}\n(#{c})',
       extra_filetypes = { 'astro' }
     }),
     null_ls.builtins.code_actions.eslint_d.with({

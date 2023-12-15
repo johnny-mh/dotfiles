@@ -68,4 +68,8 @@ packer.startup(function(use)
     end
   }
   use 'virchau13/tree-sitter-astro'
+  use {
+    'kdheepak/lazygit.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
 end)

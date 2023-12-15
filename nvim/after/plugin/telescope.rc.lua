@@ -68,9 +68,6 @@ end)
 vim.keymap.set('n', '<leader>d', function()
   builtin.oldfiles()
 end)
-vim.keymap.set('n', '<leader>g', function()
-  builtin.git_status()
-end)
 vim.keymap.set("n", "<leader>e", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
