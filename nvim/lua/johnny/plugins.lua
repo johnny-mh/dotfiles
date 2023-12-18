@@ -69,7 +69,12 @@ packer.startup(function(use)
   }
   use 'virchau13/tree-sitter-astro'
   use {
-    'kdheepak/lazygit.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
+    'NeogitOrg/neogit',
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim",
+      "ibhagwan/fzf-lua",
+    }
   }
 end)
