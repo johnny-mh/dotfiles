@@ -51,5 +51,4 @@ y = 2
 blur = true
 decorations = "buttonless"
 dynamic_padding = true
-opacity = 0.8
 startup_mode = "Maximized"
