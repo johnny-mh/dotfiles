@@ -1,0 +1,7 @@
+{
+  "banner": {
+    "prefix": "ban",
+    "body": ["// ====================== $1 ======================"],
+    "description": "Adding comment banner"
+  }
+}
