@@ -3,3 +3,9 @@
 -- Add any additional options here
 vim.opt.conceallevel = 0
 vim.opt.swapfile = false
+
+vim.filetype.add({
+  extension = {
+    mdx = "mdx",
+  },
+})
