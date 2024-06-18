@@ -4,6 +4,7 @@
     "lazyvim.plugins.extras.coding.mini-surround",
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.dap.core",
+    "lazyvim.plugins.extras.editor.fzf",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.astro",
     "lazyvim.plugins.extras.lang.docker",
@@ -21,3 +22,4 @@
   },
   "version": 6
 }
+
